@@ -54,9 +54,9 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+
         this.props.resetFeedbackForm();
+        this.props.postFeedback(values);
     }
 
 
@@ -68,8 +68,8 @@ class Contact extends Component {
                 <div className="row">
                     <div className="col">
                     <Breadcrumb>
-                            <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>Contact Us</BreadcrumbItem>
+                        <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                     </Breadcrumb>
                     <h2>Contact Us</h2>
                     <hr/>
